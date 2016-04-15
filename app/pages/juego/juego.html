@@ -1,0 +1,41 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title align-title="center"><label class="tituloInicial">Reflejómetro</label></ion-title>
+</ion-navbar>
+
+<ion-content class="colorfondo">
+  <ion-row>
+    <ion-col>
+      <div class="textoCentrado">
+        <h1>Comprueba tus reflejos para comprobar como vas</h1>
+      </div>
+    </ion-col>    
+  </ion-row>
+<ion-row>
+  <ion-col width-50>
+      <button class="fondoTransparente" (click)="reiniciar()"><ion-icon name="refresh-circle" class="imagenTam"></ion-icon></button>
+      <button class="fondoTransparente" (click)="aumentarDificultad()"><ion-icon name="add-circle" class="imagenTam"></ion-icon></button>
+      <label class="button nivel">Nivel: {{dificultad}}</label> 
+  </ion-col>
+  <ion-col width-50>
+    <ion-row>
+        <ion-col offset-50><div id="puntuacionId" class="textoCentrado puntuaciones">Ptos: {{puntuacion}}</div></ion-col>
+    </ion-row>  
+    <ion-row>
+      <ion-col offset-50><div id="temporizadorId" class="textoCentrado temporizador">Time: {{temporizador}}</div></ion-col>
+    </ion-row>  
+  </ion-col>
+</ion-row>
+
+    <ion-row *ngFor="#i of numeroRows" >
+      <ion-col width-10 class="celtaTablero" *ngFor="#numcol of numeroCol;#indi = index" (click)="celdaClickada(i,numcol)" [attr.name]="indi">
+        <div [attr.id]="'celda' + i + numcol">
+          <img style="display:none" src="./img/correcto.png"/>
+          <img style="display:none" src="./img/cruz.png"/>    
+        </div>
+      </ion-col>
+    </ion-row>
+
+</ion-content>

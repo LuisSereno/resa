@@ -1,0 +1,46 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title align-title="center"><label class="tituloInicial">Resacómetro</label></ion-title>
+</ion-navbar>
+
+<ion-content class="has-header grid-page colorfondo">
+
+
+    <ion-row>
+      <ion-col width-100 style="background-color: lightblue;border: 3px groove;border-radius: 15px;">
+      <div class="textoCentrado">
+        <h2>Número de copas</h2>
+      </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <span class="dameEspacio"></span>
+    </ion-row>  
+    <ion-row>
+      <ion-col width-100>
+        <graficoQueso></graficoQueso>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <span class="dameEspacio"></span>
+    </ion-row>  
+    <ion-row>
+      <ion-col width-100 style="background-color: lightblue;border: 3px groove;border-radius: 15px;">
+        <div class="textoCentrado">
+          <h2>Copas por hora</h2>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <span class="dameEspacio"></span>
+    </ion-row>  
+    <ion-row>
+      <ion-col width-100>
+        <graficoBarras></graficoBarras>
+      </ion-col>
+    </ion-row>
+    
+
+</ion-content>

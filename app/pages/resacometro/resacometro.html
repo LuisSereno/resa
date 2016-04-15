@@ -1,0 +1,49 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title align-title="center"><label class="tituloInicial">Resacómetro</label></ion-title>
+</ion-navbar>
+
+<ion-content class="has-header grid-page colorfondo" >
+  <ion-row>
+    <ion-col>
+      <div class="textoCentrado">
+        <h1>¡Anota lo que tomas!</h1>
+      </div>
+    </ion-col>    
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div class="textoCentrado">
+        <h3>No se te olvide anotar ni una ;)</h3>
+      </div>      
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <button round large block style="background-color:#795548" (click)="aumentaBebida('Copa')" [disabled]="!deshabilitar">Otra copa   <ion-icon name="wine"></ion-icon></button>
+  </ion-row>
+  <ion-row>
+    <span class="dameEspacio"></span>
+  </ion-row>  
+  <ion-row>
+    <button round large block style="background-color:#FF9800" (click)="aumentaBebida('Birra')" [disabled]="!deshabilitar">Otra birra   <ion-icon name="beer"></ion-icon></button>
+  </ion-row>
+  <ion-row>
+    <span class="dameEspacio"></span>
+  </ion-row>  
+  <ion-row>
+    <button round large block style="background-color:#32DB3F" (click)="aumentaBebida('Chupito')" [disabled]="!deshabilitar">Otro Chupito   <ion-icon   name="beaker" ></ion-icon></button>
+  </ion-row>
+
+  <ion-row>
+    <span class="dameEspacio"></span>
+  </ion-row>  
+</ion-content>
+
+
+  <ion-toolbar position="bottom" danger>
+    <ion-title class="textoCentrado consejo" (click)="darConsejo()">Consejo</ion-title>
+  </ion-toolbar>
+

@@ -1,0 +1,57 @@
+.celtaTablero{
+    border: 2em solid transparent;
+    -webkit-border-image: url(../../img/papel_mano.png) 17% round; /* Safari 3.1-5 */
+    -o-border-image: url(../../img/papel_mano.png) 17% round; /* Opera 11-12.1 */
+    border-image: url(../../img/papel_mano.png) 17% round;
+    height: 4em;
+    background-color: #FFFFE7;
+}
+
+.puntuaciones{
+	background-color: red;
+	border: 1px ridge;
+	border-radius: 5px;
+}
+
+.fondoTransparente{
+	background-color:rgba(56, 126, 245, 0);
+}
+
+.alineacionLabel{
+	margin-top: -10px;
+}
+
+.nivel{
+    background-color: green;
+    border: 1px ridge;
+    border-radius: 5px;
+    color: bisque;
+    font-size: 1.2em;
+    padding: 0.5em 0.3em;
+}
+
+.temporizador{
+	background-color: lightblue;
+	border: 1px ridge;
+	border-radius: 5px;
+}
+
+.celtaTablero img{
+	width: 3em;
+	max-width:3em;
+	margin-top:-1.3em;
+    margin-left:-1.4em;
+}
+
+.celdaI{
+	margin-left:auto;
+}
+
+.celdaD{
+	margin-right:auto;
+}
+
+.imagenTam{
+	font-size:3em;
+	color:#008000;
+}

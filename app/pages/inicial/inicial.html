@@ -1,0 +1,39 @@
+
+<ion-content class="has-header grid-page colorfondo">
+  <ion-row>
+    <ion-col>
+       <div class="textoCentrado">
+          <h3>Pulsa nuevo día.</h3>
+        </div>
+    </ion-col>    
+  </ion-row>
+  <ion-row>
+     <div class="textoCentrado">
+      <button round primary (click)="cargarDatosNuevos()">Nuevo día</button>
+    </div>
+  </ion-row>
+    <ion-row>
+    <span></span>
+  </ion-row>  
+  <div *ngIf="fechas.length > 0">
+    
+    <ion-row>
+      <ion-col>
+       <div class="textoCentrado">
+          <h3>O selecciona una fecha anterior.</h3>
+        </div>
+      </ion-col>    
+    </ion-row>
+    <ion-row >
+       <div class="textoCentrado">
+        <ion-list inset>
+          <button ion-item *ngFor="#fecha of fechas">
+            <button round secondary (click)="cargarDatosFecha(fecha)">{{fecha}}</button>
+          </button>
+        </ion-list>
+       </div>
+    </ion-row>
+
+  </div>
+
+</ion-content>
